@@ -3,132 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BeaverTag</title>
+  <title>BeaverTag | Crafted Utility</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
-    }
-
     body {
-      overflow-x: hidden;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+      background: #111;
+      color: white;
     }
-
     section {
-      height: 100vh;
-      width: 100vw;
       position: relative;
+      width: 100%;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #000;
-      color: #fff;
-    }
-
-    .text-box {
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 2rem;
-      border-radius: 0.5rem;
-      max-width: 90%;
-    }
-
-    .text-left {
-      left: 5%;
-      text-align: left;
-    }
-
-    .text-right {
-      right: 5%;
-      text-align: right;
-    }
-
-    .text-center {
+      flex-direction: column;
       text-align: center;
     }
-
-    .logo {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      height: 60px;
-    }
-
-    .tag-images {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-
-    .tag-images img {
-      height: 250px;
-    }
-
-    .hero-text h1 {
-      font-size: 3rem;
-      font-weight: 800;
-    }
-
-    .hero-text h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-top: 1rem;
-    }
-
-    .hero-text p {
-      margin-top: 1rem;
-      font-size: 1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-button {
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background: #fff;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-    }
-
-    section img.bg {
+    .bg-image {
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -1;
+      z-index: -2;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 0;
+    }
+    .section-dark {
+      background-color: #111;
+    }
+    .section-dark .overlay {
+      background: none;
+    }
+    h1, h2, h3, p {
+      margin: 0.5rem 0;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .tag-images {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+    .tag-images img {
+      height: 200px;
+    }
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 60px;
+    }
+    .cta-button {
+      background: white;
+      color: black;
+      font-weight: bold;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      border-radius: 0;
+    }
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      color: black;
+      font-weight: bold;
+      padding: 1rem 1.8rem;
+      border-radius: 0;
+      text-decoration: none;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-  <!-- Section 1: Hero -->
-  <section style="background-color:#111">
+  <!-- Section 1 -->
+  <section class="section-dark">
     <img src="images/Maple Beaver logo White transparent bg.png" class="logo" alt="Maple Beaver Logo">
-    <div>
-      <div class="tag-images">
-        <img src="images/BeaverTag front.png" alt="BeaverTag Front">
-        <img src="images/BeaverTag back.png" alt="BeaverTag Back">
-      </div>
-      <div class="hero-text text-center">
-        <h1>BeaverTag</h1>
-        <h2>Crafted Utility. Canadian Soul.</h2>
-        <p>A symbol of resilience, belonging, and understated pride. Made to last. Made in Canada.</p>
-        <p><strong>A Maple Beaver Original.</strong></p>
-        <button class="hero-button">Sign up for Early Access</button>
-      </div>
+    <div class="tag-images">
+      <img src="images/BeaverTag front.png" alt="BeaverTag Front">
+      <img src="images/BeaverTag back.png" alt="BeaverTag Back">
+    </div>
+    <div class="overlay">
+      <h1>BeaverTag</h1>
+      <h2>Crafted Utility. Canadian Soul.</h2>
+      <p>A symbol of resilience, belonging, and understated pride. Made to last. Made in Canada.</p>
+      <p><strong>A Maple Beaver Original.</strong></p>
+      <button class="cta-button">Sign up for Early Access</button>
     </div>
   </section>
 
   <!-- Section 2 -->
   <section>
-    <img src="images/Beaver picture.jpeg" class="bg" alt="Beaver">
-    <div class="text-box text-right">
+    <img src="images/Beaver picture.jpeg" alt="Beaver" class="bg-image">
+    <div class="overlay" style="text-align: right;">
       <h2>Canada’s Icon.<br>Nature’s Architect.</h2>
       <p>A beaver’s tail is Nature’s utility tool: practical, adaptable, quiet but powerful. It balances, steers, stores energy, and builds futures. Just like the people it represents.</p>
     </div>
@@ -136,17 +121,17 @@
 
   <!-- Section 3 -->
   <section>
-    <img src="images/Leather craft.jpg" class="bg" alt="Crafting">
-    <div class="text-box text-left">
+    <img src="images/Leather craft.jpg" alt="Leather Craft" class="bg-image">
+    <div class="overlay" style="text-align: left;">
       <h2>Designed with Meaning.<br>Crafted to Last.</h2>
       <p>Engineered by nature to endure, to adapt, and to support, the beaver’s tail is a blueprint for purposeful design. Each BeaverTag is shaped to echo the tail of the beaver — thick in the center, balanced on the edge.</p>
     </div>
   </section>
 
   <!-- Section 4 -->
-  <section style="background-color: #111">
-    <img src="images/BeaverTagHoodie.jpg" class="bg" alt="Hoodie with Tag">
-    <div class="text-box text-right">
+  <section>
+    <img src="images/BeaverTagHoodie.jpg" alt="Tag on Hoodie" class="bg-image">
+    <div class="overlay" style="text-align: right;">
       <h2>A Tag. A Totem.<br>A Statement.</h2>
       <p>BeaverTag is more than a uniquely Canadian product. It’s a quiet nod to your roots — a symbol of the values we carry. Hard work. Belonging. Purpose.</p>
     </div>
@@ -154,19 +139,22 @@
 
   <!-- Section 5 -->
   <section>
-    <img src="images/BeaverTag backpack.jpeg" class="bg" alt="Backpack with Tag">
-    <div class="text-box text-left">
+    <img src="images/BeaverTag backpack.jpeg" alt="Tag on Backpack" class="bg-image">
+    <div class="overlay" style="text-align: left;">
       <h2>Carry What Matters.<br>Mark What’s Yours.</h2>
-      <p>Join the clan of early carriers. Be among the first to wear a piece of crafted Canadian identity. Limited drop. Lifelong pride.</p>
+      <p>Join the clan of early carriers. Be among the first to wear a piece of crafted Canadian identity.<br>Limited drop. Lifelong pride.</p>
     </div>
   </section>
 
   <!-- Section 6 -->
-  <section style="background-color:#111">
-    <div class="text-box text-center">
+  <section class="section-dark">
+    <div class="overlay">
       <h2>Signup now to secure your BeaverTag</h2>
-      <p style="color:#aaa; font-weight: bold; margin-top: 1rem;">A Maple Beaver initiative</p>
+      <p style="opacity: 0.6; font-weight: bold;">A Maple Beaver initiative</p>
     </div>
   </section>
+
+  <!-- Floating Button -->
+  <a href="https://maplebeaver.ca/products/beavertag" class="floating-button">Get Yours</a>
 </body>
 </html>
