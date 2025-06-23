@@ -3,167 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BeaverTag | Maple Beaver</title>
+  <title>BeaverTag Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --dark-bg: #0e0e0e;
-      --text-light: #ffffff;
-      --text-muted: #ccc;
-      --overlay: rgba(0, 0, 0, 0.4);
-      --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
-    body {
-      font-family: var(--font-stack);
-      color: var(--text-light);
-      background-color: var(--dark-bg);
-      overflow-x: hidden;
+
+    html, body {
+      scroll-behavior: smooth;
+      background-color: #111;
+      color: white;
     }
+
     section {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 4rem 2rem;
       position: relative;
-      background-size: cover;
-      background-position: center;
-      padding: 3rem 1rem;
-      transition: all 0.6s ease-in-out;
     }
-    .overlay {
-      background-color: var(--overlay);
-      padding: 2rem;
-      max-width: 720px;
-      border-radius: 0;
-    }
-    h1, h2, h3 {
-      font-weight: bold;
-    }
-    h1 {
-      font-size: 2.5rem;
-    }
-    h2 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      line-height: 1.6;
-      color: var(--text-muted);
-    }
-    .centered {
-      text-align: center;
-    }
-    .left {
-      text-align: left;
-    }
-    .right {
-      text-align: right;
-    }
-    .split {
+
+    .section-content {
+      max-width: 1200px;
+      width: 100%;
       display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
       flex-wrap: wrap;
-      gap: 1rem;
     }
-    .split img {
+
+    .text-box {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 0px;
+      max-width: 500px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .text-box h1, .text-box h2 {
+      margin-bottom: 1rem;
+    }
+
+    .text-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .image-box {
+      flex: 1;
+      text-align: center;
+      animation: fadeInRight 1s ease-in-out;
+    }
+
+    .image-box img {
       max-width: 100%;
       height: auto;
+      object-fit: cover;
     }
-    .signup-btn {
-      background: #fff;
-      color: #000;
+
+    .cta-button, .floating-btn {
+      background: white;
+      color: black;
       border: none;
-      padding: 0.75rem 1.5rem;
-      margin-top: 1rem;
-      font-weight: bold;
+      padding: 0.8rem 1.5rem;
+      font-weight: 600;
       cursor: pointer;
-      border-radius: 0;
-      transition: background 0.3s;
+      margin-top: 1.5rem;
+      border-radius: 0px;
+      text-decoration: none;
     }
-    .signup-btn:hover {
-      background: #ccc;
-    }
+
     .floating-btn {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #fff;
-      color: #000;
-      padding: 1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 0;
-      cursor: pointer;
-      z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+    }
+
+    .logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 60px;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.5rem; }
-      p { font-size: 0.9rem; }
-      .overlay {
+      .section-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .text-box {
         padding: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
+  <img class="logo" src="images/Maple Beaver logo White transparent bg.png" alt="Maple Beaver Logo" />
 
-  <section style="background-color: #0e0e0e">
-    <div class="centered">
-      <img src="images/Maple Beaver logo White transparent bg.png" alt="Maple Beaver Logo" style="height:60px; margin-bottom: 1rem;" />
-      <div class="split" style="justify-content: center; gap: 2rem;">
-        <img src="images/BeaverTag front.png" alt="BeaverTag Front" style="height:200px;" />
-        <img src="images/BeaverTag back.png" alt="BeaverTag Back" style="height:200px;" />
+  <section>
+    <div class="section-content" style="flex-direction: column; text-align: center;">
+      <div class="image-box">
+        <img src="images/BeaverTag front.png" alt="BeaverTag Front" style="max-width: 140px; margin: 0 1rem;">
+        <img src="images/BeaverTag back.png" alt="BeaverTag Back" style="max-width: 140px; margin: 0 1rem;">
       </div>
-      <h1>BeaverTag</h1>
-      <h2>Crafted Utility. Canadian Soul.</h2>
-      <p>A symbol of resilience, belonging, and understated pride. Made to last. Made in Canada.</p>
-      <p><strong>A Maple Beaver Original.</strong></p>
-      <a href="https://maplebeaver.ca/products/beavertag"><button class="signup-btn">Sign up for Early Access</button></a>
+      <div class="text-box">
+        <h1>BeaverTag</h1>
+        <h2>Crafted Utility. Canadian Soul.</h2>
+        <p>A symbol of resilience, belonging, and understated pride. Made to last. Made in Canada.</p>
+        <p style="margin-top:1rem; font-weight:600;">A Maple Beaver Original.</p>
+        <a class="cta-button" href="https://maplebeaver.ca/products/beavertag">Sign up for Early Access</a>
+      </div>
     </div>
   </section>
 
-  <section style="background-image: url('images/Beaver picture.jpeg');">
-    <div class="overlay right">
-      <h2>Canada’s Icon.<br />Nature’s Architect.</h2>
+  <section style="background-image: url('images/Beaver picture.jpeg'); background-size: cover; background-position: center;">
+    <div class="text-box" style="margin-left: auto;">
+      <h2>Canada’s Icon.<br>Nature’s Architect.</h2>
       <p>A beaver’s tail is Nature’s utility tool: practical, adaptable, quiet but powerful. It balances, steers, stores energy, and builds futures. Just like the people it represents.</p>
     </div>
   </section>
 
-  <section style="background-image: url('images/Leather craft.jpg');">
-    <div class="overlay left">
-      <h2>Designed with Meaning.<br />Crafted to Last.</h2>
+  <section style="background-image: url('images/Leather craft.jpg'); background-size: cover; background-position: center;">
+    <div class="text-box">
+      <h2>Designed with Meaning.<br>Crafted to Last.</h2>
       <p>Engineered by nature to endure, to adapt, and to support, the beaver’s tail is a blueprint for purposeful design. Each BeaverTag is shaped to echo the tail of the beaver — thick in the center, balanced on the edge.</p>
     </div>
   </section>
 
-  <section style="background-image: url('images/BeaverTagHoodie.jpg');">
-    <div class="overlay right">
-      <h2>A Tag. A Totem.<br />A Statement.</h2>
+  <section style="background-image: url('images/BeaverTagHoodie.jpg'); background-size: cover; background-position: center;">
+    <div class="text-box" style="margin-left: auto;">
+      <h2>A Tag. A Totem.<br>A Statement.</h2>
       <p>BeaverTag is more than a uniquely Canadian product. It’s a quiet nod to your roots — a symbol of the values we carry. Hard work. Belonging. Purpose.</p>
     </div>
   </section>
 
-  <section style="background-image: url('images/BeaverTag backpack.jpeg');">
-    <div class="overlay left">
-      <h2>Carry What Matters.<br />Mark What’s Yours.</h2>
+  <section style="background-image: url('images/9305AA15-8D65-4E86-B54A-CA2172DA8C62.jpeg'); background-size: cover; background-position: center;">
+    <div class="text-box">
+      <h2>Carry What Matters.<br>Mark What’s Yours.</h2>
       <p>Join the clan of early carriers. Be among the first to wear a piece of crafted Canadian identity. Limited drop. Lifelong pride.</p>
     </div>
   </section>
 
-  <section style="background-color: #111;">
-    <div class="overlay centered">
+  <section>
+    <div class="text-box">
       <h2>Signup now to secure your BeaverTag</h2>
-      <p><strong>A Maple Beaver initiative</strong></p>
+      <p style="margin-top:1rem; color: grey;">A Maple Beaver initiative</p>
     </div>
   </section>
 
-  <a href="https://maplebeaver.ca/products/beavertag"><button class="floating-btn">Sign up for Early Access</button></a>
+  <a class="floating-btn" href="https://maplebeaver.ca/products/beavertag">Get Yours</a>
 </body>
 </html>
