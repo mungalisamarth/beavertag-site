@@ -13,7 +13,7 @@
       background-color: #111;
       color: white;
     }
-
+   /* SECTION 1 Styling - BeaverTag intro */
     .section {
       display: flex;
       justify-content: flex-start;
@@ -102,128 +102,15 @@
       z-index: 10;
     }
 
-    
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 20px;
-    gap: 20px;
-  }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+        gap: 30px;
+      }
 
-  .images {
-    order: -1;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .images img {
-    height: auto;
-    width: 45vw;
-    object-fit: contain;
-  }
-
-  .text-content h1 {
-    font-size: 36px;
-  }
-
-  .text-content h2 {
-    font-size: 20px;
-  }
-
-  .text-content p {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
-  .beaver-container,
-  .leather-container {
-    justify-content: center;
-    padding: 20px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .text-box {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .text-box h2,
-  .leather-section h2 {
-    font-size: 28px;
-  }
-
-  .text-box p,
-  .leather-section p {
-    font-size: 16px;
-  }
-
-  .usage-section {
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .usage-overlay {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .usage-text h2 {
-    font-size: 28px;
-  }
-
-  .usage-text p {
-    font-size: 16px;
-  }
-
-  .backpack-section {
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .backpack-overlay {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .backpack-text h2 {
-    font-size: 28px;
-  }
-
-  .backpack-text p {
-    font-size: 16px;
-  }
-
-  .signup-section {
-    padding: 60px 20px;
-  }
-
-  .signup-section h2 {
-    font-size: 28px;
-  }
-
-  .signup-section p {
-    font-size: 16px;
-  }
-
-  .floating-button {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-}
-.images {
+      .images {
         order: -1;
         flex-direction: row;
         justify-content: center;
@@ -251,6 +138,7 @@
         padding: 0 10px;
       }
     }
+     /* SECTION 2 Styling - About Beaver */
     .beaver-section {
   background: url('images/Beaver picture.jpeg') no-repeat center center/cover;
   position: relative;
@@ -286,128 +174,14 @@
 }
 
 /* Responsive */
-
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+  .beaver-container {
+    justify-content: center;
+    padding: 0 20px;
     text-align: center;
-    padding-top: 20px;
-    gap: 20px;
-  }
-
-  .images {
-    order: -1;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .images img {
-    height: auto;
-    width: 45vw;
-    object-fit: contain;
-  }
-
-  .text-content h1 {
-    font-size: 36px;
-  }
-
-  .text-content h2 {
-    font-size: 20px;
-  }
-
-  .text-content p {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
-  .beaver-container,
-  .leather-container {
-    justify-content: center;
-    padding: 20px;
-    text-align: left;
-    align-items: flex-start;
   }
 
   .text-box {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .text-box h2,
-  .leather-section h2 {
-    font-size: 28px;
-  }
-
-  .text-box p,
-  .leather-section p {
-    font-size: 16px;
-  }
-
-  .usage-section {
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .usage-overlay {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .usage-text h2 {
-    font-size: 28px;
-  }
-
-  .usage-text p {
-    font-size: 16px;
-  }
-
-  .backpack-section {
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .backpack-overlay {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .backpack-text h2 {
-    font-size: 28px;
-  }
-
-  .backpack-text p {
-    font-size: 16px;
-  }
-
-  .signup-section {
-    padding: 60px 20px;
-  }
-
-  .signup-section h2 {
-    font-size: 28px;
-  }
-
-  .signup-section p {
-    font-size: 16px;
-  }
-
-  .floating-button {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-}
-.text-box {
     padding: 30px;
   }
 
@@ -419,6 +193,7 @@
     font-size: 16px;
   }
 }
+     /* SECTION 3 Styling - Leather Craft */
 .leather-section {
   background: url('images/Leather craft.jpg') no-repeat center center/cover;
   position: relative;
@@ -456,128 +231,15 @@
 }
 
 /* Mobile layout */
-
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 20px;
-    gap: 20px;
-  }
-
-  .images {
-    order: -1;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .images img {
-    height: auto;
-    width: 45vw;
-    object-fit: contain;
-  }
-
-  .text-content h1 {
-    font-size: 36px;
-  }
-
-  .text-content h2 {
-    font-size: 20px;
-  }
-
-  .text-content p {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
-  .beaver-container,
   .leather-container {
-    justify-content: center;
-    padding: 20px;
-    text-align: left;
+    justify-content: flex-start;
     align-items: flex-start;
+    padding: 40px 20px;
+    text-align: left;
   }
 
-  .text-box {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .text-box h2,
-  .leather-section h2 {
-    font-size: 28px;
-  }
-
-  .text-box p,
-  .leather-section p {
-    font-size: 16px;
-  }
-
-  .usage-section {
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .usage-overlay {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .usage-text h2 {
-    font-size: 28px;
-  }
-
-  .usage-text p {
-    font-size: 16px;
-  }
-
-  .backpack-section {
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .backpack-overlay {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .backpack-text h2 {
-    font-size: 28px;
-  }
-
-  .backpack-text p {
-    font-size: 16px;
-  }
-
-  .signup-section {
-    padding: 60px 20px;
-  }
-
-  .signup-section h2 {
-    font-size: 28px;
-  }
-
-  .signup-section p {
-    font-size: 16px;
-  }
-
-  .floating-button {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-}
-.leather-section .text-box {
+  .leather-section .text-box {
     padding: 30px;
   }
 
@@ -590,7 +252,7 @@
   }
 }
 
-    /* SECTION 3 Styling */
+    /* SECTION 4 Styling - BeaverTag in use */
 .usage-section {
   background: url('images/BeaverTag-usage.jpg') center center / cover no-repeat;
   position: relative;
@@ -622,128 +284,14 @@
 }
 
 /* Mobile adjustments */
-
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 20px;
-    gap: 20px;
-  }
-
-  .images {
-    order: -1;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .images img {
-    height: auto;
-    width: 45vw;
-    object-fit: contain;
-  }
-
-  .text-content h1 {
-    font-size: 36px;
-  }
-
-  .text-content h2 {
-    font-size: 20px;
-  }
-
-  .text-content p {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
-  .beaver-container,
-  .leather-container {
-    justify-content: center;
-    padding: 20px;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .text-box {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .text-box h2,
-  .leather-section h2 {
-    font-size: 28px;
-  }
-
-  .text-box p,
-  .leather-section p {
-    font-size: 16px;
-  }
-
   .usage-section {
     justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    background-position: center center;
-    background-size: cover;
+    text-align: left;
+    padding: 0 20px;
   }
 
   .usage-overlay {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .usage-text h2 {
-    font-size: 28px;
-  }
-
-  .usage-text p {
-    font-size: 16px;
-  }
-
-  .backpack-section {
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .backpack-overlay {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .backpack-text h2 {
-    font-size: 28px;
-  }
-
-  .backpack-text p {
-    font-size: 16px;
-  }
-
-  .signup-section {
-    padding: 60px 20px;
-  }
-
-  .signup-section h2 {
-    font-size: 28px;
-  }
-
-  .signup-section p {
-    font-size: 16px;
-  }
-
-  .floating-button {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-}
-.usage-overlay {
     padding: 20px;
     max-width: 100%;
   }
@@ -788,7 +336,27 @@
   color: #eee;
   line-height: 1.6;
 }
+@media (max-width: 768px) {
+  .backpack-section {
+    justify-content: center;         /* center the text overlay */
+    padding: 0 20px;                 /* reduce horizontal padding */
+    align-items: flex-end;           /* push the overlay down if needed */
+    background-position: center top; /* shift visual focus */
+  }
 
+  .backpack-overlay {
+    padding: 20px;                   /* reduce box padding */
+    max-width: 100%;                 /* allow full width if needed */
+  }
+
+  .backpack-text h2 {
+    font-size: 32px;                 /* scale down heading */
+  }
+
+  .backpack-text p {
+    font-size: 16px;                 /* scale down paragraph text */
+  }
+}
     /* SECTION 6: Signup CTA */
 .signup-section {
   background-color: #111;
@@ -829,6 +397,14 @@
 
 .floating-button:hover {
   background-color: #f5f5f5;
+}
+    @media (max-width: 768px) {
+  .floating-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
 }
   </style>
 </head>
