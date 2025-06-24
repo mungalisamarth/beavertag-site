@@ -102,15 +102,128 @@
       z-index: 10;
     }
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 40px;
-        gap: 30px;
-      }
+    
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+  }
 
-      .images {
+  .images {
+    order: -1;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .images img {
+    height: auto;
+    width: 45vw;
+    object-fit: contain;
+  }
+
+  .text-content h1 {
+    font-size: 36px;
+  }
+
+  .text-content h2 {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .beaver-container,
+  .leather-container {
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .text-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .text-box h2,
+  .leather-section h2 {
+    font-size: 28px;
+  }
+
+  .text-box p,
+  .leather-section p {
+    font-size: 16px;
+  }
+
+  .usage-section {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .usage-overlay {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .usage-text h2 {
+    font-size: 28px;
+  }
+
+  .usage-text p {
+    font-size: 16px;
+  }
+
+  .backpack-section {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .backpack-overlay {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .backpack-text h2 {
+    font-size: 28px;
+  }
+
+  .backpack-text p {
+    font-size: 16px;
+  }
+
+  .signup-section {
+    padding: 60px 20px;
+  }
+
+  .signup-section h2 {
+    font-size: 28px;
+  }
+
+  .signup-section p {
+    font-size: 16px;
+  }
+
+  .floating-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+.images {
         order: -1;
         flex-direction: row;
         justify-content: center;
@@ -173,14 +286,128 @@
 }
 
 /* Responsive */
+
 @media (max-width: 768px) {
-  .beaver-container {
-    justify-content: center;
-    padding: 0 20px;
+  .container {
+    flex-direction: column;
     text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .images {
+    order: -1;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .images img {
+    height: auto;
+    width: 45vw;
+    object-fit: contain;
+  }
+
+  .text-content h1 {
+    font-size: 36px;
+  }
+
+  .text-content h2 {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .beaver-container,
+  .leather-container {
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .text-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .text-box h2,
+  .leather-section h2 {
+    font-size: 28px;
+  }
+
+  .text-box p,
+  .leather-section p {
+    font-size: 16px;
+  }
+
+  .usage-section {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .usage-overlay {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .usage-text h2 {
+    font-size: 28px;
+  }
+
+  .usage-text p {
+    font-size: 16px;
+  }
+
+  .backpack-section {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .backpack-overlay {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .backpack-text h2 {
+    font-size: 28px;
+  }
+
+  .backpack-text p {
+    font-size: 16px;
+  }
+
+  .signup-section {
+    padding: 60px 20px;
+  }
+
+  .signup-section h2 {
+    font-size: 28px;
+  }
+
+  .signup-section p {
+    font-size: 16px;
+  }
+
+  .floating-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+.text-box {
     padding: 30px;
   }
 
@@ -229,15 +456,128 @@
 }
 
 /* Mobile layout */
+
 @media (max-width: 768px) {
-  .leather-container {
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 40px 20px;
-    text-align: left;
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
   }
 
-  .leather-section .text-box {
+  .images {
+    order: -1;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .images img {
+    height: auto;
+    width: 45vw;
+    object-fit: contain;
+  }
+
+  .text-content h1 {
+    font-size: 36px;
+  }
+
+  .text-content h2 {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .beaver-container,
+  .leather-container {
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .text-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .text-box h2,
+  .leather-section h2 {
+    font-size: 28px;
+  }
+
+  .text-box p,
+  .leather-section p {
+    font-size: 16px;
+  }
+
+  .usage-section {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .usage-overlay {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .usage-text h2 {
+    font-size: 28px;
+  }
+
+  .usage-text p {
+    font-size: 16px;
+  }
+
+  .backpack-section {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .backpack-overlay {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .backpack-text h2 {
+    font-size: 28px;
+  }
+
+  .backpack-text p {
+    font-size: 16px;
+  }
+
+  .signup-section {
+    padding: 60px 20px;
+  }
+
+  .signup-section h2 {
+    font-size: 28px;
+  }
+
+  .signup-section p {
+    font-size: 16px;
+  }
+
+  .floating-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+.leather-section .text-box {
     padding: 30px;
   }
 
@@ -282,14 +622,128 @@
 }
 
 /* Mobile adjustments */
+
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .images {
+    order: -1;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .images img {
+    height: auto;
+    width: 45vw;
+    object-fit: contain;
+  }
+
+  .text-content h1 {
+    font-size: 36px;
+  }
+
+  .text-content h2 {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .beaver-container,
+  .leather-container {
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .text-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .text-box h2,
+  .leather-section h2 {
+    font-size: 28px;
+  }
+
+  .text-box p,
+  .leather-section p {
+    font-size: 16px;
+  }
+
   .usage-section {
     justify-content: center;
-    text-align: left;
-    padding: 0 20px;
+    align-items: flex-end;
+    padding: 20px;
+    background-position: center center;
+    background-size: cover;
   }
 
   .usage-overlay {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .usage-text h2 {
+    font-size: 28px;
+  }
+
+  .usage-text p {
+    font-size: 16px;
+  }
+
+  .backpack-section {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .backpack-overlay {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .backpack-text h2 {
+    font-size: 28px;
+  }
+
+  .backpack-text p {
+    font-size: 16px;
+  }
+
+  .signup-section {
+    padding: 60px 20px;
+  }
+
+  .signup-section h2 {
+    font-size: 28px;
+  }
+
+  .signup-section p {
+    font-size: 16px;
+  }
+
+  .floating-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+.usage-overlay {
     padding: 20px;
     max-width: 100%;
   }
