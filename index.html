@@ -138,6 +138,60 @@
         padding: 0 10px;
       }
     }
+    .beaver-section {
+  background: url('images/Beaver picture.jpeg') no-repeat center center/cover;
+  position: relative;
+}
+
+.beaver-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  padding: 0 5%;
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
+  color: white;
+  padding: 40px;
+  max-width: 500px;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.text-box h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+
+.text-box p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #eee;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .beaver-container {
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .text-box {
+    padding: 30px;
+  }
+
+  .text-box h2 {
+    font-size: 32px;
+  }
+
+  .text-box p {
+    font-size: 16px;
+  }
+}
   </style>
 </head>
 
@@ -159,6 +213,16 @@
       </div>
     </div>
   </section>
+  <section class="section beaver-section">
+  <div class="beaver-container">
+    <div class="text-box">
+      <h2>Canada’s Icon.<br>Nature’s Architect.</h2>
+      <p>
+        A beaver’s tail is Nature’s utility tool: practical, adaptable, quiet but powerful. It balances, steers, stores energy, and builds futures. Just like the people it represents.
+      </p>
+    </div>
+  </div>
+</section>
 </body>
 
 </html>
