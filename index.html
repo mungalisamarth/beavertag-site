@@ -3,133 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BeaverTag Landing</title>
+  <title>BeaverTag</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: #0f0f0f;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
       overflow-x: hidden;
     }
 
-    .section {
-      height: 100vh;
+    .hero {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       padding: 5vw;
-      gap: 4vw;
+      min-height: 100vh;
+      box-sizing: border-box;
+      gap: 3vw;
     }
 
-    .text-container {
-      max-width: 40vw;
+    .logo {
+      position: absolute;
+      top: 2vw;
+      left: 2vw;
+      width: 60px;
+      height: auto;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 500px;
+      animation: slideInLeft 1s ease-out forwards;
       opacity: 0;
-      transform: translateX(-50px);
-      transition: opacity 1s ease, transform 1s ease;
     }
 
-    .text-container.visible {
-      opacity: 1;
-      transform: translateX(0);
+    .hero-text h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
     }
 
-    .text-container h1 {
-      font-size: 3.5vw;
-      font-weight: 800;
-      margin-bottom: 1.5vw;
+    .hero-text h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
     }
 
-    .text-container h2 {
-      font-size: 2vw;
-      font-weight: 700;
-      margin-bottom: 1vw;
-    }
-
-    .text-container p {
-      font-size: 1.2vw;
+    .hero-text p {
+      font-size: 1rem;
+      color: #bbb;
       line-height: 1.6;
-      color: #ccc;
     }
 
-    .image-container {
+    .hero-images {
+      flex: 1;
       display: flex;
-      flex-direction: row;
       justify-content: center;
-      align-items: flex-end;
-      gap: 2vw;
+      gap: 2rem;
+      animation: slideInBottom 1.2s ease-out forwards;
       opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 1s ease, transform 1s ease;
     }
 
-    .image-container.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .hero-images img {
+      height: 75vh;
+      max-width: 100%;
     }
 
-    .image-container img {
-      height: 45vh;
-      object-fit: contain;
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInBottom {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     @media (max-width: 768px) {
-      .section {
+      .hero {
         flex-direction: column;
-        padding: 10vw 5vw;
-        text-align: center;
+        padding: 3vh 5vw;
+        gap: 2rem;
       }
-      .text-container {
-        max-width: 90vw;
-      }
-      .text-container h1 {
-        font-size: 8vw;
-      }
-      .text-container h2 {
-        font-size: 6vw;
-      }
-      .text-container p {
-        font-size: 4vw;
-      }
-      .image-container {
+      .hero-images {
         flex-direction: row;
         justify-content: center;
-        gap: 4vw;
+        gap: 2rem;
       }
-      .image-container img {
-        height: 25vh;
+      .hero-images img {
+        height: 40vh;
+      }
+      .hero-text {
+        text-align: center;
+        max-width: 90vw;
       }
     }
   </style>
 </head>
 <body>
-  <div class="section">
-    <div class="text-container" id="textBlock">
+  <img class="logo" src="images/Maple Beaver logo White transparent bg.png" alt="Maple Beaver Logo" />
+
+  <section class="hero">
+    <div class="hero-text">
       <h1>BeaverTag</h1>
       <h2>Crafted Utility. Canadian Soul.</h2>
-      <p>
-        A symbol of resilience, belonging, and understated pride.<br>
-        Made to last. Made in Canada.
-      </p>
+      <p>A symbol of resilience, belonging, and understated pride. <br>Made to last. Made in Canada.</p>
     </div>
-    <div class="image-container" id="imageBlock">
-      <img src="./images/BeaverTag front.png" alt="BeaverTag Front">
-      <img src="./images/BeaverTag back.png" alt="BeaverTag Back">
+    <div class="hero-images">
+      <img src="images/BeaverTag front.png" alt="BeaverTag Front" />
+      <img src="images/BeaverTag back.png" alt="BeaverTag Back" />
     </div>
-  </div>
+  </section>
 
   <script>
-    const text = document.getElementById('textBlock');
-    const images = document.getElementById('imageBlock');
-
-    window.addEventListener('load', () => {
-      text.classList.add('visible');
-      images.classList.add('visible');
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelector(".hero-text").style.opacity = 1;
+      document.querySelector(".hero-images").style.opacity = 1;
     });
   </script>
 </body>
