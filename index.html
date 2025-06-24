@@ -192,57 +192,58 @@
     font-size: 16px;
   }
 }
-    .beaver-section {
-  background: url('images/Beaver picture.jpeg') no-repeat center center/cover;
+.leather-section {
+  background: url('images/Leather craft.jpg') no-repeat center center/cover;
   position: relative;
 }
 
-.beaver-container {
+.leather-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start; /* Text box will appear on the left */
   align-items: center;
   height: 100vh;
   padding: 0 5%;
 }
 
-.text-box {
-  background-color: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
+.leather-section .text-box {
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   padding: 40px;
   max-width: 500px;
   animation: slideInLeft 1s ease forwards;
 }
 
-.text-box h2 {
+.leather-section h2 {
   font-size: 48px;
   font-weight: 800;
   margin: 0 0 20px;
 }
 
-.text-box p {
+.leather-section p {
   font-size: 20px;
   line-height: 1.6;
   color: #eee;
   font-weight: 400;
 }
 
-/* Responsive */
+/* Mobile layout */
 @media (max-width: 768px) {
-  .beaver-container {
-    justify-content: center;
-    padding: 0 20px;
-    text-align: center;
+  .leather-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px 20px;
+    text-align: left;
   }
 
-  .text-box {
+  .leather-section .text-box {
     padding: 30px;
   }
 
-  .text-box h2 {
+  .leather-section h2 {
     font-size: 32px;
   }
 
-  .text-box p {
+  .leather-section p {
     font-size: 16px;
   }
 }
