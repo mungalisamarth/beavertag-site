@@ -247,6 +247,59 @@
     font-size: 16px;
   }
 }
+
+    /* SECTION 3 Styling */
+.usage-section {
+  background: url('images/BeaverTag-usage.jpg') center center / cover no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+}
+
+.usage-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* 40% opacity black box */
+  padding: 40px;
+  max-width: 600px;
+}
+
+.usage-text h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.usage-text p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .usage-section {
+    justify-content: center;
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  .usage-overlay {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .usage-text h2 {
+    font-size: 32px;
+  }
+
+  .usage-text p {
+    font-size: 16px;
+  }
+}
   </style>
 </head>
 
@@ -284,6 +337,19 @@
       <h2>Designed with Meaning.<br>Crafted to Last.</h2>
       <p>
         Engineered by nature to endure, to adapt,to support, and to communicate, the beaver’s tail is a blueprint for purposeful design. <br> Each BeaverTag is shaped to echo the tail of the beaver. Thick in the center, balanced on the edge.
+      </p>
+    </div>
+  </div>
+</section>
+  <!-- SECTION 3: Usage Showcase -->
+<section class="section usage-section">
+  <div class="usage-overlay">
+    <div class="usage-text">
+      <h2>A Tag. A Totem.<br>A Statement.</h2>
+      <p>
+        BeaverTag is more than a uniquely Canadian product.<br>
+        It’s a quiet nod to your Canadian roots.<br>
+        A symbol of the values we carry.
       </p>
     </div>
   </div>
