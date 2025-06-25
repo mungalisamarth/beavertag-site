@@ -103,12 +103,12 @@
     }
 
     @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 20px;
-        gap: 15px;
-      }
+   .container {
+  flex-direction: column;
+  text-align: center;
+  padding-top: 10px;     /* Reduced */
+  gap: 5px;              /* Reduced */
+}
 
       .images {
         order: -1;
@@ -116,15 +116,16 @@
         justify-content: center;
         flex-wrap: nowrap;
         gap: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
       }
 
-      .images img {
-        height: 80vh;
-        max-width: 45vw;
-        object-fit: contain;
-      }
-
+    .images img {
+  height: auto;              /* Let height adjust proportionally */
+  max-height: 80vh;          /* Limit height */
+  width: auto;
+  max-width: 45vw;           /* Consistent sizing by width */
+  object-fit: contain;
+}
       .text-content h1 {
         font-size: 36px;
       }
@@ -137,6 +138,11 @@
         font-size: 16px;
         padding: 0 10px;
       }
+      .text-content h1,
+.text-content h2,
+.text-content p {
+  margin: 0;
+}
     }
      /* SECTION 2 Styling - About Beaver */
     .beaver-section {
@@ -422,7 +428,7 @@ display: flex;
         <img src="images/BeaverTag back.png" alt="BeaverTag Back">
       </div>
       <div class="text-content">
-        <h1>BeaverTag</h1>
+        <h1>BeaverTag™</h1>
         <h2>Crafted Statement. Canadian Soul.</h2>
         <p>
           A symbol of resilience, belonging, and Canadian pride.<br>
@@ -479,7 +485,7 @@ display: flex;
 </section>
   <!-- Section 6: Signup CTA -->
 <section class="signup-section">
-  <h2>Sign up now to secure your BeaverTag</h2>
+  <h2>Sign up now to secure your BeaverTag™</h2>
   <p>A Maple Beaver initiative</p>
 </section>
 
