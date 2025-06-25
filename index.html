@@ -96,7 +96,7 @@
 
     .logo {
       position: absolute;
-      top: 30px;
+      top: 20px;
       left: 30px;
       height: 60px;
       z-index: 10;
@@ -107,7 +107,7 @@
   flex-direction: column;
   text-align: center;
   padding-top: -10px;     /* Reduced */
-  gap: 5px;              /* Reduced */
+  gap: 0px;              /* Reduced */
 }
 
       .images {
@@ -181,26 +181,35 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-.beaver-container {
-display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  padding: 0 5%;
+  .beaver-container {
+    display: flex;
+    justify-content: flex-start;     /* Push content to top-left */
+    align-items: flex-start;         /* Align to top */
+    height: 100vh;
+    padding: 20px;                   /* Add space around all sides */
+    background-position: center top; /* Adjust visible portion */
+    background-size: contain;       /* Show more image width */
   }
+
   .text-box {
-    padding: 10px;
+    padding: 10px 15px;              /* Reduced internal padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: improves contrast on image */
+    max-width: 100%;                 /* Avoid edge overflow */
   }
+
   .text-box h1 {
-        font-size: 36px;
-      }
+    font-size: 28px;                /* Smaller heading for mobile */
+    line-height: 1.2;
+  }
 
   .text-box h2 {
-    font-size: 24 px;
+    font-size: 20px;
+    line-height: 1.3;
   }
 
   .text-box p {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
      /* SECTION 3 Styling - Leather Craft */
@@ -243,22 +252,34 @@ display: flex;
 /* Mobile layout */
 @media (max-width: 768px) {
   .leather-container {
-     justify-content: center;         /* center the text overlay */
-    padding: 0 20px;                 /* reduce horizontal padding */
-    align-items: flex-end;           /* push the overlay down if needed */
-    background-position: center top; /* shift visual focus */
+    display: flex;
+    justify-content: flex-start;          /* align text to left */
+    align-items: flex-start;              /* align to top */
+    padding: 20px;                        /* space from top-left */
+    height: 100vh;
+    background-position: center top;      /* adjust focal point */
+    background-size: contain;             /* show more of image */
   }
 
   .leather-section .text-box {
-    padding: 10px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);  /* optional dark background */
+    max-width: 100%;
   }
 
-  .leather-section h2 {
-    font-size: 24px;
+  .text-box h1 {
+    font-size: 28px;                      /* consistent with other sections */
+    line-height: 1.2;
   }
 
-  .leather-section p {
-    font-size: 16px;
+  .text-box h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .text-box p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
 
@@ -296,22 +317,34 @@ display: flex;
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .usage-section {
-    justify-content: center;
+    justify-content: flex-start;         /* align text left */
+    align-items: flex-start;             /* move text to top */
     text-align: left;
-    padding: 0 20px;
+    padding: 20px;                       /* spacing from edges */
+    height: 100vh;
+    background-position: center top;     /* improve visual framing */
+    background-size: contain;            /* show more of the image */
   }
 
   .usage-overlay {
-    padding: 20px;
+    padding: 10px 15px;
     max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* add overlay if missing */
+  }
+
+  .usage-text h1 {
+    font-size: 28px;
+    line-height: 1.2;
   }
 
   .usage-text h2 {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 1.3;
   }
 
   .usage-text p {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
 
@@ -348,23 +381,34 @@ display: flex;
 }
 @media (max-width: 768px) {
   .backpack-section {
-    justify-content: center;         /* center the text overlay */
-    padding: 0 20px;                 /* reduce horizontal padding */
-    align-items: flex-end;           /* push the overlay down if needed */
-    background-position: center top; /* shift visual focus */
+    justify-content: flex-start;             /* align text to left */
+    align-items: flex-start;                 /* position text near top */
+    padding: 20px;                           /* space from edges */
+    height: 100vh;
+    background-position: center top;         /* show more of image */
+    background-size: contain;                /* avoid severe cropping */
+    text-align: left;
   }
 
   .backpack-overlay {
-    padding: 20px;                   /* reduce box padding */
-    max-width: 100%;                 /* allow full width if needed */
+    padding: 10px 15px;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);     /* ensure readability */
+  }
+
+  .backpack-text h1 {
+    font-size: 28px;
+    line-height: 1.2;
   }
 
   .backpack-text h2 {
-    font-size: 32px;                 /* scale down heading */
+    font-size: 20px;
+    line-height: 1.3;
   }
 
   .backpack-text p {
-    font-size: 16px;                 /* scale down paragraph text */
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
     /* SECTION 6: Signup CTA */
@@ -410,7 +454,7 @@ display: flex;
 }
     @media (max-width: 768px) {
   .floating-button {
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
     padding: 12px 20px;
     font-size: 14px;
