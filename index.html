@@ -319,7 +319,6 @@
   .usage-section {
     justify-content: flex-start;         /* align text left */
     align-items: flex-start;             /* move text to top */
-    text-align: left;
     padding: 20px;                       /* spacing from edges */
     height: 100vh;
     background-position: center top;     /* improve visual framing */
@@ -381,13 +380,13 @@
 }
 @media (max-width: 768px) {
   .backpack-section {
+    display: flex;
     justify-content: flex-start;             /* align text to left */
     align-items: flex-start;                 /* position text near top */
     padding: 20px;                           /* space from edges */
     height: 100vh;
     background-position: center top;         /* show more of image */
     background-size: contain;                /* avoid severe cropping */
-    text-align: left;
   }
 
   .backpack-overlay {
