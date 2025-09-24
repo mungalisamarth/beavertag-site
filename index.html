@@ -1,563 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title> Canadian Emblem - BeaverTag™ | Canadian Made.</title>
-<meta name="description" content="BeaverTag™ is a Canadian Made leather accessory that embodies Canadian pride, style, and craftsmanship. Designed to resemble the iconic Beaver's tail, it makes a true Canadian statement piece, meant to be carried with pride">
-<meta name="keywords" content="Canadian gifts, Canada souvenirs, Canadian identity symbols, Canadian fashion, leather craft Canada, handmade Canadian accessories, patriotic gifts, made in Canada">
-<meta name="author" content="Maple Beaver">
-<meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BeaverTag™ – Handmade Canadian Leather Keychain & Bag Tag | Maple Beaver</title>
+  <meta name="description" content="BeaverTag™ is a handcrafted, full-grain leather keychain & bag charm inspired by the beaver tail. Designed & made in Canada by Maple Beaver. A meaningful Canadian gift with eco-friendly packaging.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://beavertag.ca/">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="BeaverTag™ – Handmade Canadian Leather Keychain & Bag Tag">
+  <meta property="og:description" content="A refined Canadian accessory in full-grain leather. Handmade in Canada by Maple Beaver.">
+  <meta property="og:url" content="https://beavertag.ca/">
+  <meta property="og:image" content="https://beavertag.ca/images/beavertag-gift-box-canadian-made-keychain-bag-tag.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Perf / font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #111;
-      color: white;
+    :root{
+      --bg:#111; --text:#fff; --muted:#d3d3d3;
+      --panel:rgba(0,0,0,.45); --panel-strong:rgba(0,0,0,.55);
+      --btn:#fff; --btnText:#000;
     }
-   /* SECTION 1 Styling - BeaverTag intro */
-    .section {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      height: 100vh;
-      padding: 0 5%;
-      overflow: hidden;
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .section{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .wrap{width:100%;max-width:1400px;padding:0 5%}
+    h1,h2{margin:0 0 .5rem}
+    p{margin:0;color:var(--muted);line-height:1.6}
+
+    /* Floating logo */
+    .logo-wrap{position:fixed;top:16px;left:24px;z-index:10000}
+    .logo{height:56px;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.6))}
+    .logo:focus-visible{outline:2px solid #fff;outline-offset:4px}
+
+    /* Floating CTA */
+    .floating-button{
+      position:fixed;right:24px;bottom:28px;z-index:9999;
+      background:var(--btn);color:var(--btnText);text-decoration:none;
+      padding:14px 24px;border-radius:999px;font-weight:800;letter-spacing:.4px;
+      box-shadow:0 8px 22px rgba(0,0,0,.35);transition:transform .15s ease, background .2s ease
     }
+    .floating-button:hover{transform:translateY(-2px);background:#f5f5f5}
+    .floating-button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 1400px;
-      gap: 5px;
+    /* HERO – full-bleed background with text overlay */
+    .hero{background:url('images/beavertag-gift-box-canadian-made-keychain-bag-tag.jpg') center/cover no-repeat}
+    .hero .panel{max-width:720px;background:var(--panel);padding:36px}
+    .hero h1{font-size:72px;line-height:1.05}
+    .hero h2{font-size:36px;font-weight:600;margin-bottom:10px}
+    .hero p{font-size:20px}
+
+    /* Split/collage sections */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .tile{position:relative;min-height:60vh;border-radius:12px;overflow:hidden}
+    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .tile .alt-label{position:absolute;left:10px;bottom:10px;background:var(--panel-strong);padding:6px 10px;border-radius:999px;font-size:12px}
+
+    /* Single background with text block */
+    .bg-text{position:relative}
+    .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.02)}
+    .textbox{position:relative;max-width:680px;background:var(--panel);padding:32px;border-radius:12px}
+
+    /* Triptych collage */
+    .triptych{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    .triptych .tile{min-height:62vh}
+
+    /* Final outdoor section */
+    .outdoor{background:url('images/beavertag-outdoor-hero-lifestyle.jpg') center/cover no-repeat}
+    .outdoor .panel{max-width:700px;background:var(--panel);padding:36px}
+
+    /* Mobile */
+    @media (max-width: 900px){
+      .hero h1{font-size:42px}
+      .hero h2{font-size:22px}
+      .hero p{font-size:16px}
+      .split{grid-template-columns:1fr}
+      .triptych{grid-template-columns:1fr}
+      .tile{min-height:46vh}
+      .textbox{padding:16px}
+      .logo{height:48px}
+      .floating-button{right:16px;bottom:16px;padding:12px 18px;font-size:14px}
     }
-
-    .text-content {
-      max-width: 600px;
-      margin-right: 20px;
-      animation: slideInLeft 1s ease forwards;
-      animation-delay: 0.2s;
-    }
-
-    .text-content h1 {
-      font-size: 72px;
-      margin: 0 0 10px;
-    }
-
-    .text-content h2 {
-      font-size: 42px;
-      font-weight: 600;
-      margin: 0 0 20px;
-    }
-
-    .text-content p {
-      font-size: 24px;
-      color: #ccc;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    .images {
-      display: flex;
-      gap: 10px;
-      animation: slideInUp 1s ease forwards;
-      animation-delay: 0.2s;
-    }
-
-    .images img {
-      height: 85vh;
-      max-height: 800px;
-      width: auto;
-    }
-
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes slideInUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 30px;
-      height: 60px;
-      z-index: 10;
-    }
-
-    @media (max-width: 768px) {
-   .container {
-  flex-direction: column;
-  text-align: center;
-  padding-top: -10px;     /* Reduced */
-  gap: 0px;              /* Reduced */
-}
-
-      .images {
-        order: -1;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: nowrap;
-        gap: 10px;
-        margin-bottom: 0px;
-      }
-
-    .images img {
-  height: auto;              /* Let height adjust proportionally */
-  max-height: 80vh;          /* Limit height */
-  width: auto;
-  max-width: 45vw;           /* Consistent sizing by width */
-  object-fit: contain;
-}
-      .text-content h1 {
-        font-size: 36px;
-      }
-
-      .text-content h2 {
-        font-size: 24px;
-      }
-
-      .text-content p {
-        font-size: 16px;
-        padding: 0 10px;
-      }
-      .text-content h1,
-.text-content h2,
-.text-content p {
-  margin: 0;
-}
-    }
-     /* SECTION 2 Styling - About Beaver */
-    .beaver-section {
-  background: url('images/Beaver picture.jpeg') no-repeat center center/cover;
-  position: relative;
-}
-
-.beaver-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  padding: 0 5%;
-}
-
-.text-box {
-  background-color: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
-  color: white;
-  padding: 40px;
-  max-width: 500px;
-  animation: slideInLeft 1s ease forwards;
-}
-
-.text-box h2 {
-  font-size: 48px;
-  font-weight: 800;
-  margin: 0 0 20px;
-}
-
-.text-box p {
-  font-size: 20px;
-  line-height: 1.6;
-  color: #eee;
-  font-weight: 400;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .beaver-container {
-    display: flex;
-    justify-content: flex-start;     /* Push content to top-left */
-    align-items: flex-start;         /* Align to top */
-    height: 100vh;
-    padding: 20px;                   /* Add space around all sides */
-    background-position: center top; /* Adjust visible portion */
-    background-size: contain;       /* Show more image width */
-  }
-
-  .text-box {
-    padding: 10px 15px;              /* Reduced internal padding */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: improves contrast on image */
-    max-width: 100%;                 /* Avoid edge overflow */
-  }
-
-  .text-box h1 {
-    font-size: 28px;                /* Smaller heading for mobile */
-    line-height: 1.2;
-  }
-
-  .text-box h2 {
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
-  .text-box p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-}
-     /* SECTION 3 Styling - Leather Craft */
-.leather-section {
-  background: url('images/Leather craft.jpg') no-repeat center center/cover;
-  position: relative;
-  justify-content: flex-end;
-}
-
-.leather-container {
-  display: flex;
-  justify-content: flex-end; /* Text box will appear on the right */
-  align-items: center;
-  height: 100vh;
-  padding: 0 5%;
-}
-
-.leather-section .text-box {
-  justify-content: flex-end;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  padding: 40px;
-  max-width: 500px;
-  animation: slideInLeft 1s ease forwards;
-}
-
-.leather-section h2 {
-  font-size: 48px;
-  font-weight: 800;
-  margin: 0 0 20px;
-}
-
-.leather-section p {
-  font-size: 20px;
-  line-height: 1.6;
-  color: #eee;
-  font-weight: 400;
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-  .leather-container {
-    display: flex;
-    justify-content: flex-start;          /* align text to left */
-    align-items: flex-start;              /* align to top */
-    padding: 20px;                        /* space from top-left */
-    min-height: 100vh;
-    height:auto;
-    background-position: center top;      /* adjust focal point */
-    background-size: cover;             /* show more of image */
-  }
-
-  .leather-section .text-box {
-    padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.5);  /* optional dark background */
-    max-width: 100%;
-  }
-
-  .text-box h1 {
-    font-size: 28px;                      /* consistent with other sections */
-    line-height: 1.2;
-  }
-
-  .text-box h2 {
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
-  .text-box p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-}
-
-    /* SECTION 4 Styling - BeaverTag in use */
-.usage-section {
-  background: url('images/BeaverTag-usage.jpg') center center / cover no-repeat;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 0 5%;
-}
-
-.usage-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* 40% opacity black box */
-  padding: 40px;
-  max-width: 600px;
-}
-
-.usage-text h2 {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.usage-text p {
-  font-size: 20px;
-  font-weight: 400;
-  color: #eee;
-  line-height: 1.6;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .usage-section {
-    justify-content: flex-start;         /* align text left */
-    align-items: flex-start;             /* move text to top */
-    padding: 20px;                       /* spacing from edges */
-   min-height: 70vh;
-    height:auto;
-    background-position: right center;      /* adjust focal point */
-    background-size: cover;              /* show more of the image */
-  }
-
-  .usage-overlay {
-    padding: 10px 15px;
-    max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* add overlay if missing */
-  }
-
-  .usage-text h1 {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-
-  .usage-text h2 {
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
-  .usage-text p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-}
-
-    /* SECTION 5 Styling - Backpack */
-.backpack-section {
-  background: url('images/BeaverTag backpack.jpg') center center / cover no-repeat;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 5%;
-}
-
-.backpack-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* 40% opacity black box */
-  padding: 40px;
-  max-width: 600px;
-}
-
-.backpack-text h2 {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  color: white;
-}
-
-.backpack-text p {
-  font-size: 20px;
-  font-weight: 400;
-  color: #eee;
-  line-height: 1.6;
-}
-@media (max-width: 768px) {
-  .backpack-section {
-    display: flex;
-    justify-content: flex-start;             /* align text to left */
-    align-items: flex-start;                 /* position text near top */
-    padding: 20px;                           /* space from edges */
-   min-height: 70vh;
-    height:auto;
-    background-position: left center;     /* adjust focal point */
-    background-size: cover;                /* avoid severe cropping */
-  }
-
-  .backpack-overlay {
-    padding: 10px 15px;
-    max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);     /* ensure readability */
-  }
-
-  .backpack-text h1 {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-
-  .backpack-text h2 {
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
-  .backpack-text p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-}
-    /* SECTION 6: Signup CTA */
-.signup-section {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.signup-section h2 {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.signup-section p {
-  font-size: 24px;
-  color: #888;
-  font-weight: 600;
-}
-
-/* Floating Sign-Up Button */
-.floating-button {
-  position: fixed;
-  bottom: 150px;
-  right: 100px;
-  background-color: #ffffff;
-  color: #000;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  border-radius: 0px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  text-decoration: none;
-  transition: background 0.3s ease;
-  z-index: 9999;
-}
-
-.floating-button:hover {
-  background-color: #f5f5f5;
-}
-    @media (max-width: 768px) {
-  .floating-button {
-    bottom: 37px;
-    right: 20px;
-    padding: 12px 20px;
-    font-size: 14px;
-  }
-}
   </style>
 </head>
-
 <body>
-  <img class="logo" src="images/Maple Beaver logo White transparent bg.png" alt="Maple Beaver Logo">
-  <section class="section">
-    <div class="container">
-      <div class="images">
-        <img src="images/BeaverTag front.png" alt="BeaverTag Front">
-        <img src="images/BeaverTag back.png" alt="BeaverTag Back">
-      </div>
-      <div class="text-content">
+
+  <!-- Floating Maple Beaver logo -->
+  <a class="logo-wrap" href="https://maplebeaver.ca" aria-label="Maple Beaver — go to homepage">
+    <img class="logo" src="images/maple-beaver-logo-white.png" alt="Maple Beaver logo">
+  </a>
+
+  <!-- Floating CTA -->
+  <a class="floating-button" href="https://maplebeaver.ca/products/beavertag" rel="noopener">SHOP NOW</a>
+
+  <!-- 1) HERO: BeaverTag with eco-friendly box (giftable) -->
+  <section class="section hero" aria-label="BeaverTag gift presentation">
+    <div class="wrap">
+      <div class="panel">
         <h1>BeaverTag™</h1>
-        <h2>Crafted Statement. Canadian Soul.</h2>
-        <p>
-          A true emblem of Canadian Spirit - resilient, purposeful, and rooted in legacy. 
-<br><br>
-        <strong> Made in Canada. Made for Canadians.</strong> 
-        </p>
+        <h2>Handmade Canadian Leather Keychain & Bag Charm</h2>
+        <p>Crafted in premium full-grain, vegetable-tanned leather and presented in eco-friendly packaging. A meaningful Canadian gift—designed & made in Canada by Maple Beaver.</p>
       </div>
     </div>
   </section>
-  <section class="section beaver-section">
-  <div class="beaver-container">
-    <div class="text-box">
-      <h2>Canada’s Icon.<br>Nature’s Engineering</h2>
-      <p>
-         A beaver’s tail is Nature’s utility tool: practical, adaptable, quiet but powerful. It balances, steers, stores energy, and builds futures. Just like the people it represents. <br> BeaverTag draws from this legacy.
-      </p>
-    </div>
-  </div>
-</section>
-  <section class="section leather-section">
-  <div class="leather-container">
-    <div class="text-box">
-      <h2>Designed with Meaning.<br>Crafted to Last.</h2>
-      <p>
-        Engineered by nature to endure, to adapt,to support, and to communicate, the beaver’s tail is a blueprint for purposeful design. <br> Each BeaverTag is shaped to echo the tail of the beaver. Thick in the center, balanced on the edge.
-      </p>
-    </div>
-  </div>
-</section>
-  <!-- SECTION 3: Usage Showcase -->
-<section class="section usage-section">
-  <div class="usage-overlay">
-    <div class="usage-text">
-      <h2>A Tag. A Totem.<br>A Statement.</h2>
-      <p>
-        BeaverTag is more than a uniquely Canadian product.<br>
-        It’s a quiet nod to your Canadian roots.<br>
-        A symbol of the values we carry.
-      </p>
-    </div>
-  </div>
-</section>
 
-  <section class="backpack-section">
-  <div class="backpack-overlay">
-    <div class="backpack-text">
-      <h2>Carry What Matters.<br>Mark What’s Yours.</h2>
-      <p>
-        Join the clan of early carriers. Be among the first to<br>
-        wear a piece of crafted Canadian identity.<br>
-        Limited drop.
-      </p>
+  <!-- 2) Collage: vintage beaver stamp + beaver -->
+  <section class="section" aria-label="Canadian heritage inspiration">
+    <div class="wrap split">
+      <figure class="tile">
+        <img src="images/canada-vintage-beaver-postage-stamp.jpg"
+             alt="Vintage Canadian postage stamp featuring the beaver—national symbol and inspiration for BeaverTag">
+        <figcaption class="alt-label">Canadian heritage</figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="images/canadian-beaver-in-nature-lakeside.jpg"
+             alt="Canadian beaver in nature—tail texture inspiring BeaverTag’s iconic form">
+        <figcaption class="alt-label">Nature’s engineering</figcaption>
+      </figure>
     </div>
-  </div>
-</section>
-  <!-- Section 6: Signup CTA -->
-<section class="signup-section">
-  <h2>Sign up now to secure your BeaverTag™</h2>
-  <p>A Maple Beaver initiative</p>
-</section>
+  </section>
 
-<!-- Floating Signup Button -->
-<a href="https://maplebeaver.ca/pages/secure-your-beavertag" class="floating-button">Sign Up</a>
+  <!-- 3) Hand stitching / craftsmanship -->
+  <section class="section bg-text" aria-label="Handmade leather craftsmanship">
+    <div class="bg" style="background-image:url('images/beavertag-hand-stitching-full-grain-leather-made-in-canada.jpg');"></div>
+    <div class="wrap">
+      <div class="textbox">
+        <h2>Designed with Meaning. Crafted to Last.</h2>
+        <p>Each BeaverTag is cut, edged, and saddle-stitched by accomplished Canadian leather artists using time-honoured techniques. We use top-tier full-grain, vegetable-tanned leather—the kind that develops character and patina with every journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) Triptych: usage collage — keychain, bag charm, fashion accessory -->
+  <section class="section" aria-label="Ways to wear BeaverTag">
+    <div class="wrap triptych">
+      <figure class="tile">
+        <img src="images/beavertag-keychain-in-hand.jpg"
+             alt="BeaverTag used as a keychain—compact, tactile, and durable full-grain leather">
+        <figcaption class="alt-label">Keychain</figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="images/beavertag-bag-charm-on-tote.jpg"
+             alt="BeaverTag as a bag charm on a canvas tote—subtle nod to Canadian identity">
+        <figcaption class="alt-label">Bag charm</figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="images/beavertag-fashion-accessory-necklace.jpg"
+             alt="BeaverTag worn as a minimalist fashion accessory—statement of Canadian craftsmanship">
+        <figcaption class="alt-label">Fashion accessory</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 5) Artistic outdoor / lifestyle -->
+  <section class="section outdoor" aria-label="BeaverTag outdoor lifestyle">
+    <div class="wrap">
+      <div class="panel">
+        <h2>Carry What Matters. Mark What’s Yours.</h2>
+        <p>Join the clan of early carriers and wear a piece of crafted Canadian identity. Limited drop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product schema (points buyers to your Shopify product page) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "BeaverTag™",
-  "description": "A handcrafted leather style accessory that celebrates Canadian identity and craftsmanship.",
-  "brand": "Maple Beaver",
-  "image": "https://beavertag.ca/images/BeaverTag front.png",
-  "url": "https://beavertag.ca",
-  "offers": {
-    "@type": "Offer",
-    "availability": "https://schema.org/PreOrder",
-    "priceCurrency": "CAD"
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "BeaverTag™ – Handmade Canadian Leather Keychain & Bag Charm",
+    "description": "A refined Canadian accessory in full-grain, vegetable-tanned leather. Handmade in Canada by Maple Beaver. Eco-friendly gift packaging.",
+    "brand": { "@type": "Brand", "name": "Maple Beaver" },
+    "image": [
+      "https://beavertag.ca/images/beavertag-gift-box-canadian-made-keychain-bag-tag.jpg",
+      "https://beavertag.ca/images/canada-vintage-beaver-postage-stamp.jpg",
+      "https://beavertag.ca/images/canadian-beaver-in-nature-lakeside.jpg",
+      "https://beavertag.ca/images/beavertag-hand-stitching-full-grain-leather-made-in-canada.jpg",
+      "https://beavertag.ca/images/beavertag-keychain-in-hand.jpg",
+      "https://beavertag.ca/images/beavertag-bag-charm-on-tote.jpg",
+      "https://beavertag.ca/images/beavertag-fashion-accessory-necklace.jpg",
+      "https://beavertag.ca/images/beavertag-outdoor-hero-lifestyle.jpg"
+    ],
+    "url": "https://maplebeaver.ca/products/beavertag",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://maplebeaver.ca/products/beavertag",
+      "priceCurrency": "CAD",
+      "price": "39.00",
+      "availability": "https://schema.org/InStock"
+    }
   }
-}
-</script>
-</body>
+  </script>
 
+</body>
 </html>
