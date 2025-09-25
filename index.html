@@ -9,7 +9,7 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://beavertag.ca/">
 
-  <!-- Social sharing -->
+  <!-- Social -->
   <meta property="og:type" content="product">
   <meta property="og:title" content="BeaverTag™ – Handmade Canadian Leather Keychain & Bag Tag">
   <meta property="og:description" content="A refined Canadian accessory in full-grain leather. Handmade in Canada by Maple Beaver.">
@@ -17,7 +17,6 @@
   <meta property="og:image" content="https://beavertag.ca/images/beavertag-gift-box-canadian-made-keychain-bag-tag.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Perf / font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -29,13 +28,14 @@
       --btn:#fff; --btnText:#000;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    html,body{height:100%}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-text-size-adjust:100%}
     .section{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
     .wrap{width:100%;max-width:1400px;padding:0 5%}
     h1,h2{margin:0 0 .5rem}
     p{margin:0;color:var(--muted);line-height:1.6}
 
-    /* Floating logo */
+    /* Floating Maple Beaver logo */
     .logo-wrap{position:fixed;top:16px;left:24px;z-index:10000}
     .logo{height:56px;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.6))}
     .logo:focus-visible{outline:2px solid #fff;outline-offset:4px}
@@ -44,49 +44,61 @@
     .floating-button{
       position:fixed;right:24px;bottom:28px;z-index:9999;
       background:var(--btn);color:var(--btnText);text-decoration:none;
-      padding:14px 24px;border-radius:999px;font-weight:800;letter-spacing:.4px;
+      padding:14px 24px;border-radius:0;font-weight:800;letter-spacing:.4px;
       box-shadow:0 8px 22px rgba(0,0,0,.35);transition:transform .15s ease, background .2s ease
     }
     .floating-button:hover{transform:translateY(-2px);background:#f5f5f5}
     .floating-button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 
-    /* HERO – full-bleed background with text overlay */
+    /* HERO – full-bleed */
     .hero{background:url('images/beavertag-gift-box-canadian-made-keychain-bag-tag.jpg') center/cover no-repeat}
-    .hero .panel{max-width:720px;background:var(--panel);padding:36px}
+    .hero .panel{max-width:720px;background:var(--panel);padding:36px;border-radius:0}
     .hero h1{font-size:72px;line-height:1.05}
     .hero h2{font-size:36px;font-weight:600;margin-bottom:10px}
     .hero p{font-size:20px}
 
-    /* Split/collage sections */
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .tile{position:relative;min-height:60vh;border-radius:12px;overflow:hidden}
+    /* Split/collage tiles */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%}
+    .tile{position:relative;min-height:60vh;border-radius:0;overflow:hidden;outline:1px solid rgba(255,255,255,.08)}
     .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .tile .alt-label{position:absolute;left:10px;bottom:10px;background:var(--panel-strong);padding:6px 10px;border-radius:999px;font-size:12px}
+    .tile .alt-label{position:absolute;left:10px;bottom:10px;background:var(--panel-strong);padding:6px 10px;border-radius:0;font-size:12px}
 
-    /* Single background with text block */
+    /* Single background + text */
     .bg-text{position:relative}
     .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.02)}
-    .textbox{position:relative;max-width:680px;background:var(--panel);padding:32px;border-radius:12px}
+    .textbox{position:relative;max-width:680px;background:var(--panel);padding:32px;border-radius:0}
 
-    /* Triptych collage */
-    .triptych{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    /* Triptych */
+    .triptych{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;width:100%}
     .triptych .tile{min-height:62vh}
 
-    /* Final outdoor section */
+    /* Outdoor */
     .outdoor{background:url('images/beavertag-outdoor-hero-lifestyle.jpg') center/cover no-repeat}
-    .outdoor .panel{max-width:700px;background:var(--panel);padding:36px}
+    .outdoor .panel{max-width:700px;background:var(--panel);padding:36px;border-radius:0}
 
-    /* Mobile */
+    /* -------- Mobile tweaks: show more width, less height -------- */
     @media (max-width: 900px){
+      /* make sections shorter so backgrounds crop less */
+      .section{min-height:78vh}
+      /* hero: pull the image up slightly so more of the product is visible */
+      .hero{background-position:center 35%}
       .hero h1{font-size:42px}
       .hero h2{font-size:22px}
       .hero p{font-size:16px}
+
       .split{grid-template-columns:1fr}
       .triptych{grid-template-columns:1fr}
-      .tile{min-height:46vh}
+
+      /* tiles: reduce height; keep object-fit:cover but with shallower crop */
+      .tile{min-height:44vh}
+      .tile img{object-position:center 40%}
+
+      /* stitched/craft background: show more of the frame */
+      .bg{background-position:center 35%}
       .textbox{padding:16px}
+
       .logo{height:48px}
-      .floating-button{right:16px;bottom:16px;padding:12px 18px;font-size:14px}
+      .floating-button{right:16px;bottom:16px;padding:12px 18px;font-size:14px;border-radius:0}
     }
   </style>
 </head>
@@ -100,20 +112,26 @@
   <!-- Floating CTA -->
   <a class="floating-button" href="https://maplebeaver.ca/products/beavertag" rel="noopener">SHOP NOW</a>
 
-  <!-- 1) HERO: BeaverTag with eco-friendly box (giftable) -->
+  <!-- 1) HERO -->
   <section class="section hero" aria-label="BeaverTag gift presentation">
     <div class="wrap">
       <div class="panel">
         <h1>BeaverTag™</h1>
         <h2>Handmade Canadian Leather Keychain & Bag Charm</h2>
-        <p>Crafted in premium full-grain, vegetable-tanned leather and presented in eco-friendly packaging. A meaningful Canadian gift—designed & made in Canada by Maple Beaver.</p>
+        <p>Handcrafted in premium full-grain, vegetable-tanned leather and presented in eco-friendly packaging. A meaningful Canadian gift—designed & made in Canada by Maple Beaver.</p>
       </div>
     </div>
   </section>
 
-  <!-- 2) Collage: vintage beaver stamp + beaver -->
+  <!-- 2) Collage: vintage stamp + beaver -->
   <section class="section" aria-label="Canadian heritage inspiration">
     <div class="wrap split">
+       <div class="wrap">
+      <div class="textbox">
+        <h2>Cheers to the Beaver</h2>
+        <p>The Beaver is deeply woven into the fabric of the Canadian story. Today it's emerging as a strong ecological Ally. To honour this legacy 5% of BeaverTag profits are committed to Canadian Ecological conservation.</p>
+      </div>
+    </div>
       <figure class="tile">
         <img src="images/canada-vintage-beaver-postage-stamp.jpg"
              alt="Vintage Canadian postage stamp featuring the beaver—national symbol and inspiration for BeaverTag">
@@ -127,20 +145,26 @@
     </div>
   </section>
 
-  <!-- 3) Hand stitching / craftsmanship -->
+  <!-- 3) Hand stitching -->
   <section class="section bg-text" aria-label="Handmade leather craftsmanship">
     <div class="bg" style="background-image:url('images/beavertag-hand-stitching-full-grain-leather-made-in-canada.jpg');"></div>
     <div class="wrap">
       <div class="textbox">
-        <h2>Designed with Meaning. Crafted to Last.</h2>
-        <p>Each BeaverTag is cut, edged, and saddle-stitched by accomplished Canadian leather artists using time-honoured techniques. We use top-tier full-grain, vegetable-tanned leather—the kind that develops character and patina with every journey.</p>
+        <h2>Designed with Meaning. Built to Last.</h2>
+        <p>Each BeaverTag is carefully made by hand, completely in Canada, from premium, full-grain vegetable tanned leather, which ranks amongst the top 10% of leathers in the world.</p>
       </div>
     </div>
   </section>
 
-  <!-- 4) Triptych: usage collage — keychain, bag charm, fashion accessory -->
+  <!-- 4) Usage collage -->
   <section class="section" aria-label="Ways to wear BeaverTag">
     <div class="wrap triptych">
+       <div class="wrap">
+      <div class="textbox">
+        <h2>Many ways to show your pride.</h2>
+        <p>Show your Canadian spirit wherever you go.</p>
+      </div>
+    </div>
       <figure class="tile">
         <img src="images/beavertag-keychain-in-hand.jpg"
              alt="BeaverTag used as a keychain—compact, tactile, and durable full-grain leather">
@@ -159,17 +183,17 @@
     </div>
   </section>
 
-  <!-- 5) Artistic outdoor / lifestyle -->
+  <!-- 5) Artistic outdoor -->
   <section class="section outdoor" aria-label="BeaverTag outdoor lifestyle">
     <div class="wrap">
       <div class="panel">
-        <h2>Carry What Matters. Mark What’s Yours.</h2>
-        <p>Join the clan of early carriers and wear a piece of crafted Canadian identity. Limited drop.</p>
+        <h2>Share and Connect.</h2>
+        <p>Join the clan of early carriers and wear a piece of crafted Canadian identity. Tag your photos with #BeaverTag.</p>
       </div>
     </div>
   </section>
 
-  <!-- Product schema (points buyers to your Shopify product page) -->
+  <!-- Product schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
